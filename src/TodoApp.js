@@ -34,6 +34,7 @@ const TodoApp = () => {
                     </Typography>
                 </ToolBar>
            </AppBar>
+           <TodoList todos={todos}/>
         </Paper>
     );
 }
