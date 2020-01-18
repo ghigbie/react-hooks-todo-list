@@ -9,3 +9,5 @@ const TodoForm  = props => {
         </Paper>
     );
 }
+
+export default TodoForm;
