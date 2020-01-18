@@ -10,19 +10,21 @@ import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 
 const Todo = ({ task, completed}) => {
     return (
-        <>
-            <ListItem>
-                <Checkbox tabIndex={-1} checked={completed} />
-                <ListItemText>{task}</ListItemText>
-                <ListItemSecondaryAction>
-                    <IconButton>
-                        <DeleteIcon />
-                        <EditIcon />
-                    </IconButton>
-                </ListItemSecondaryAction>
-            </ListItem>
-            <Divider/>
-        </>
+      <>
+        <ListItem>
+          <Checkbox tabIndex={-1} checked={completed} />
+          <ListItemText>{task}</ListItemText>
+          <ListItemSecondaryAction>
+            <IconButton aria-label='Delete'>
+              <DeleteIcon />
+            </IconButton>
+            <IconButton aria-label='Edit'> 
+              <EditIcon />
+            </IconButton>
+          </ListItemSecondaryAction>
+        </ListItem>
+        <Divider />
+      </>
     );
 }
 

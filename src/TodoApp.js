@@ -24,6 +24,7 @@ const gridStyles = {
     marginTop: "1rem",
 }
 
+
 const TodoApp = () => {
     const fakeTodos = [
         {id: 1, task: 'walk dog', completed: false },
