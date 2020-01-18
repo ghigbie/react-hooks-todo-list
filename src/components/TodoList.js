@@ -10,10 +10,12 @@ const TodoList = ({todos})  => {
         <Paper>
             <List>
         {todos.map(todo => (
-            <ListItem key={todo.id}>
-                <ListItemText>(todo.task}</ListItemText>
+            <>
+                <ListItem key={todo.id}>
+                    <ListItemText>{todo.task}</ListItemText>
+                </ListItem>
                 <Divider/>
-            </ListItem>
+            </>
         ))}
             </List>
         </Paper>
