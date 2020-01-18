@@ -23,6 +23,7 @@ const TodoForm  = ({ addTodo })=> {
                     onChange={handleChange}
                     margin='normal'
                     label='Add New Todo'
+                    fullWidth
                 />
             </form>
         </Paper>
