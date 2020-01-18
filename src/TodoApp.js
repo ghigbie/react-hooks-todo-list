@@ -38,6 +38,7 @@ const TodoApp = () => {
                     </Typography>
                 </ToolBar>
            </AppBar>
+           <TodoForm />
            <TodoList todos={todos}/>
         </Paper>
     );
