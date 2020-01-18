@@ -5,16 +5,14 @@ import useInputState from "./../hooks/useInputState"
 
 const TodoForm  = ({ addTodo })=> {
     const [value, handleChange, reset] = useInputState("");
-    
-    const onSubmit = (e) => {
-        e.preventDefault();
-        addTodo(value);
-        reset()
-    }
 
     return(
         <Paper>
-            <form onSubmit={onSubmit}>
+            <form onSubmit={ e => {
+                e.preventDefault();
+                addTodo(value);
+                reset()
+            }}>
                 <TextField value={value}  onChange={handleChange}/>
             </form>
         </Paper>

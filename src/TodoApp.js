@@ -28,7 +28,7 @@ const TodoApp = () => {
     ]
     const [todos, setTodos] = useState(fakeTodos);
     const addTodo = newTodoText => {
-        setTodos(...todos, { id: 4, task: newTodoText, completed: false })
+        setTodos([...todos, { id: 4, task: newTodoText, completed: false}])
     }
 
     return (
@@ -36,7 +36,7 @@ const TodoApp = () => {
            <AppBar color='primary' position='static' style={appBarStyles}>
                 <ToolBar>
                     <Typography color="inherit">
-                        Todos with hooks
+                        Todos with Hooks
                     </Typography>
                 </ToolBar>
            </AppBar>

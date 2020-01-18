@@ -9,14 +9,14 @@ const TodoList = ({todos})  => {
     return (
         <Paper>
             <List>
-        {todos.map(todo => (
-            <>
+        {todos.length > 0 && todos.map(todo =>
+            (<span key={todo.id}>
                 <ListItem key={todo.id}>
                     <ListItemText>{todo.task}</ListItemText>
                 </ListItem>
                 <Divider/>
-            </>
-        ))}
+            </span>)
+        )}
             </List>
         </Paper>
     );
