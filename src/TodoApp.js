@@ -20,6 +20,10 @@ const appBarStyles = {
     height: "64px",
 }
 
+const gridStyles = {
+    marginTop: "1rem",
+}
+
 const TodoApp = () => {
     const fakeTodos = [
         {id: 1, task: 'walk dog', completed: false },
@@ -40,7 +44,7 @@ const TodoApp = () => {
                     </Typography>
                 </ToolBar>
            </AppBar>
-           <Grid container>
+           <Grid container justify='center' style={gridStyles}>
             <Grid item xs={11} md={8} lg={4}>
                 <TodoForm addTodo={addTodo}/>
                 <TodoList todos={todos}/>
