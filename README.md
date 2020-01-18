@@ -1,4 +1,4 @@
-#React Hooks Todo List
+# React Hooks Todo List
 
 A simple todo list using react hooks.
 
