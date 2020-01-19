@@ -8,16 +8,15 @@ const paperStyles = {
     padding: "0 1rem",
 }
 
-const TodoForm  = ({ id, task, editTodo, toggleEditForm})=> {
+const TodoForm  = ({ addTodo })=> {
     const [value, handleChange, reset] = useInputState("");
 
     return(
         <Paper style={paperStyles}>
             <form onSubmit={ e => {
                 e.preventDefault();
-                editTodo(id, value);
+                addTodo(value);
                 reset();
-                toggleEditForm();
             }}>
                 <TextField 
                     value={value}  

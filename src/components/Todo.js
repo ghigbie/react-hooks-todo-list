@@ -11,6 +11,7 @@ import useToggleState from "./../hooks/useToggleState";
 import EditTodoForm from './EditTodo';
 
 const Todo = ({ id, task, completed, toggleTodo, removeTodo, editTodo}) => {
+    console.log(typeof toggleEditForm);
   const [isEditing, toggle] = useToggleState();
     return (
       <>

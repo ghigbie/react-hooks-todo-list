@@ -8,7 +8,7 @@ const paperStyles = {
     padding: "0 1rem",
 }
 
-const EditTodoForm = ({task, id, editTodo}) => {
+const EditTodoForm = ({ id, task, editTodo, toggleEditForm}) => {
     const [value, handleChange, reset] = useInputState(task);
 
     return(
@@ -17,11 +17,13 @@ const EditTodoForm = ({task, id, editTodo}) => {
                 e.preventDefault();
                 editTodo(id, value);
                 reset();
+                toggleEditForm();
             }}>
                 <TextField   
                     margin='normal'
-                    label={value}
+                    label={value === task ? value : null}
                     fullWidth
+                    onChange={handleChange}
                 />
             </form>
         </Paper>
