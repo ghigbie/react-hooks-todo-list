@@ -16,7 +16,7 @@ const TodoForm  = ({ addTodo })=> {
             <form onSubmit={ e => {
                 e.preventDefault();
                 addTodo(value);
-                reset()
+                reset();
             }}>
                 <TextField 
                     value={value}  
