@@ -20,7 +20,7 @@ const Todo = ({ id, task, completed, toggleTodo, removeTodo, editTodo}) => {
                 id={id} 
                 task={task} 
                 editTodo={editTodo} 
-                toggleEdit={toggle}
+                toggleEditForm={toggle}
             />)
             :
          (<>

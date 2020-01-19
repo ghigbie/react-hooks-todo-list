@@ -38,7 +38,6 @@ const TodoApp = () => {
     }
 
     const removeTodo = todoId => {
-        console.log("removeTodos  called");
         const updatedTodos = todos.filter(todo => todo.id !== todoId)
         setTodos(updatedTodos);
     }
@@ -50,7 +49,6 @@ const TodoApp = () => {
     }
 
     const editTodo = (todoId, newTask) => {
-        console.log("Edit called");
         const updatedTodos = todos.map(todo => 
             todo.id === todoId ? {...todo, task: newTask} :  todo)
         setTodos(updatedTodos);
