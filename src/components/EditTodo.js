@@ -4,8 +4,9 @@ import TextField from "@material-ui/core/TextField";
 import useInputState from "./../hooks/useInputState";
 
 const paperStyles = {
-    margin: "1rem 0",
     padding: "0 1rem",
+    width: "90%",
+    marginBottom: "2rem",
 }
 
 const EditTodoForm = ({ id, task, editTodo, toggleEditForm}) => {
@@ -24,6 +25,7 @@ const EditTodoForm = ({ id, task, editTodo, toggleEditForm}) => {
                     label={value === task ? value : null}
                     fullWidth
                     onChange={handleChange}
+                    autoFocus
                 />
             </form>
         </Paper>
