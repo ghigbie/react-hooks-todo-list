@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect } from 'react'
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 
@@ -27,12 +27,14 @@ const gridStyles = {
 
 const TodoApp = () => {
 
-    const fakeTodos = [
-        {id: 1, task: 'walk dog', completed: false },
-        {id: 2, task: 'walk cat', completed: false },
-        {id: 3, task: 'walk fish', completed: false }
-    ]
-    const [todos, setTodos] = useState(fakeTodos);
+    const localTodos = JSON.parse(window.localStorage.getItem("todos")) || []
+
+    const [todos, setTodos] = useState(localTodos); 
+
+    useEffect(() => {
+        window.localStorage.setItem("todos", JSON.stringify(todos));
+    }, [todos]);
+
     const addTodo = newTodoText => {
         setTodos([...todos, { id: uuid(), task: newTodoText, completed: false}])
     }

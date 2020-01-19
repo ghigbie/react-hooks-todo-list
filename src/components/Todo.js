@@ -1,7 +1,6 @@
 import React from 'react'
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import Divider from "@material-ui/core/Divider";
 import Checkbox from "@material-ui/core/Checkbox";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
@@ -46,7 +45,6 @@ const Todo = ({ id, task, completed, toggleTodo, removeTodo, editTodo}) => {
             </>)
           }
         </ListItem>
-        <Divider />
       </>
     );
 }

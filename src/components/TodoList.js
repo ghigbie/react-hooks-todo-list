@@ -2,25 +2,30 @@ import React from 'react';
 import Todo from './Todo';
 import Paper from "@material-ui/core/Paper";
 import List from "@material-ui/core/List";
+import Divider from "@material-ui/core/Divider";
 
 const TodoList = ({todos, removeTodo, toggleTodo, editTodo })  => {
-    return (
+    if(todos.length) return (
         <Paper>
             <List>
-`            {todos.length > 0 && todos.map(todo =>(
-                <Todo 
-                    id={todo.id}
-                    key={todo.id} 
-                    task={todo.task}
-                    completed={todo.completed}
-                    removeTodo={removeTodo}
-                    toggleTodo={toggleTodo}
-                    editTodo={editTodo}
-                />   
+`            {todos.length > 0 && todos.map((todo, i) =>(
+                <>
+                    <Todo 
+                        id={todo.id}
+                        key={todo.id} 
+                        task={todo.task}
+                        completed={todo.completed}
+                        removeTodo={removeTodo}
+                        toggleTodo={toggleTodo}
+                        editTodo={editTodo}
+                    />   
+                    { (i < todos.length -1) && <Divider />}
+                </>
              ))}
             </List>
         </Paper>
     );
+    return null;
 }
 
 
