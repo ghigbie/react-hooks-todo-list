@@ -15,7 +15,7 @@ const TodoForm  = ({ id, task, editTodo, toggleEditForm})=> {
         <Paper style={paperStyles}>
             <form onSubmit={ e => {
                 e.preventDefault();
-                editTodo(id, task);
+                editTodo(id, value);
                 reset();
                 toggleEditForm();
             }}>
