@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 import useTodoState from './hooks/useTodoState';
@@ -26,12 +26,8 @@ const gridStyles = {
 
 
 const TodoApp = () => {
-    const initialTodos = JSON.parse(window.localStorage.getItem("todos")) || []
+    const initialTodos = [];
     const {todos, addTodo, removeTodo, toggleTodo, editTodo} = useTodoState(initialTodos); 
-
-    useEffect(() => {
-        window.localStorage.setItem("todos", JSON.stringify(todos));
-    }, [todos]);
 
     return (
         <Paper style={paperStyles}>
